@@ -10,10 +10,17 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161203130552) do
+ActiveRecord::Schema.define(version: 20161204075732) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "user_otps", force: :cascade do |t|
+    t.text     "email"
+    t.text     "otp"
+    t.datetime "expires_at"
+    t.index ["email"], name: "index_user_otps_on_email", using: :btree
+  end
 
   create_table "users", id: :uuid, default: nil, force: :cascade do |t|
     t.text     "email"

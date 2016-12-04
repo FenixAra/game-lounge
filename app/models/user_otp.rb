@@ -1,0 +1,2 @@
+class UserOtp < ApplicationRecord
+end

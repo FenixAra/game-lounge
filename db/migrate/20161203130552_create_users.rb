@@ -10,6 +10,7 @@ class CreateUsers < ActiveRecord::Migration[5.0]
       t.boolean :verified
       t.timestamps
     end
-    add_index :users, :email
+    add_index :users, :email, :unique => true
+    add_index :users, :mobile, :unique => true
   end
 end
