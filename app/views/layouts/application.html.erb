@@ -6,9 +6,24 @@
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <link rel="stylesheet" href="/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="/css/custom.css" />
   </head>
 
   <body>
     <%= yield %>
+    <footer class="footer">
+			<div class="container">
+				<br/>
+		    	<div class="col-md-12">
+		      		<div class="col-xs-6 col-md-8">
+		        		<a href="#">Terms of Service</a> | <a href="#">Privacy</a>    
+		      		</div>
+		      		<div class="col-xs-6 col-md-4">
+		        		<p class="muted pull-right">© 2016 FenixAra. All rights reserved</p>
+		      		</div>
+		    	</div>
+			</div>
+		</footer>
   </body>
 </html>
