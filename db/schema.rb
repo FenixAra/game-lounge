@@ -31,7 +31,8 @@ ActiveRecord::Schema.define(version: 20161204075732) do
     t.boolean  "verified"
     t.datetime "created_at",      null: false
     t.datetime "updated_at",      null: false
-    t.index ["email"], name: "index_users_on_email", using: :btree
+    t.index ["email"], name: "index_users_on_email", unique: true, using: :btree
+    t.index ["mobile"], name: "index_users_on_mobile", unique: true, using: :btree
   end
 
 end
