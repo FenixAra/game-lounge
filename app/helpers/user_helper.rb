@@ -1,6 +1,6 @@
 module UserHelper
 	def send_mail(to, subject, body)
-		p Pony.mail({
+		Pony.mail({
         :to => to,
         :from => "fenaravindhan@gmail.com",
         :subject => subject,

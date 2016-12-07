@@ -2,6 +2,8 @@ Rails.application.routes.draw do
   get 'user/register'
   post 'user/register_email'
   get 'user/verify_otp'
+  post 'user/verify_otp'
+  get 'user/enter_otp'
 
   get 'login/index'
 
